@@ -1,8 +1,8 @@
 const path = require('path')
 const express = require('express')
-const {fetchWeather} = require('./controllers/weatherController')
 const hbs = require('hbs')
 const allRouter = require('./routes/allRoutes')
+
 
 
 const app = express()
@@ -23,7 +23,6 @@ app.use(express.static(publicDirectoryPath))
 
 //routing
 app.use('/', allRouter);
-
 
 
 app.listen(3000, () => {
